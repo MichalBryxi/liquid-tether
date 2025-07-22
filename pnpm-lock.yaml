@@ -90,9 +90,6 @@ importers:
       ember-maybe-import-regenerator:
         specifier: ^0.1.6
         version: 0.1.6
-      ember-native-dom-helpers:
-        specifier: ^0.6.2
-        version: 0.6.2
       ember-page-title:
         specifier: ^6.2.2
         version: 6.2.2
@@ -3130,10 +3127,6 @@ packages:
 
   ember-modifier@4.2.2:
     resolution: {integrity: sha512-pPYBAGyczX0hedGWQFQOEiL9s45KS9efKxJxUQkMLjQyh+1Uef1mcmAGsdw2KmvNupITkE/nXxmVO1kZ9tt3ag==}
-
-  ember-native-dom-helpers@0.6.2:
-    resolution: {integrity: sha512-J4SfukTITFFsCYbOxG/sjGBTcZVrxgbMyFKrrTcB2cKfrglyTZSwqs9jBUpF91FEwetzmYP02Nh9N4WzcJ8cRQ==}
-    engines: {node: ^4.5 || 6.* || >= 7.*}
 
   ember-page-title@6.2.2:
     resolution: {integrity: sha512-YTXA+cylZrh9zO0zwjlaAGReT2MVOxAMnVO1OOygFrs1JBs4D6CKV3tImoilg3AvIXFBeJfFNNUbJOdRd9IGGg==}
@@ -11396,13 +11389,6 @@ snapshots:
       ember-cli-string-utils: 1.1.0
     transitivePeerDependencies:
       - '@babel/core'
-      - supports-color
-
-  ember-native-dom-helpers@0.6.2:
-    dependencies:
-      broccoli-funnel: 1.1.0
-      ember-cli-babel: 6.12.0
-    transitivePeerDependencies:
       - supports-color
 
   ember-page-title@6.2.2:
