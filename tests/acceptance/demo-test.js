@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-
+import setupApplicationTest from '../helpers/setup-application';
 import { findAll, click, visit } from '@ember/test-helpers';
 
 import {
@@ -12,6 +12,7 @@ import { startApp, destroyApp } from '../helpers/app-lifecycle';
 let app;
 
 module('Acceptance | Demos', function (hooks) {
+  setupApplicationTest(hooks);
   hooks.beforeEach(function () {
     app = startApp();
 
