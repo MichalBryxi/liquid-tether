@@ -8,10 +8,7 @@ module.exports = function (defaults) {
     snippetPaths: ['tests/dummy/snippets'],
     snippetSearchPaths: ['app', 'tests/dummy/app', 'addon'],
     sassOptions: {
-      includePaths: [
-        'node_modules/bootstrap-sass/assets/stylesheets',
-        'node_modules/flat-ui-sass/vendor/assets/stylesheets',
-      ],
+      includePaths: ['node_modules/bootstrap-sass/assets/stylesheets'],
       extension: 'scss',
     },
   });
