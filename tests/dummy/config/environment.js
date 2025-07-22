@@ -3,6 +3,7 @@
 module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'dummy',
+    podModulePrefix: 'dummy/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -15,6 +16,16 @@ module.exports = function (environment) {
         // Prevent Ember Data from overriding Date.parse.
         Date: false,
       },
+    },
+
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self' https://maxcdn.bootstrapcdn.com",
+      'connect-src': "'self'",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline' https://maxcdn.bootstrapcdn.com",
+      'media-src': "'self'"
     },
 
     APP: {
@@ -45,6 +56,7 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV.rootURL = '/liquid-tether'
   }
 
   return ENV;
