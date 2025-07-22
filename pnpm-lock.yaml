@@ -45,6 +45,9 @@ importers:
       babel-eslint:
         specifier: ^10.1.0
         version: 10.1.0(eslint@7.32.0)
+      bootstrap-sass:
+        specifier: 3.3.5
+        version: 3.3.5
       broccoli-asset-rev:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1811,6 +1814,9 @@ packages:
 
   body@5.1.0:
     resolution: {integrity: sha512-chUsBxGRtuElD6fmw1gHLpvnKdVLK302peeFa9ZqAEk8TyzZ3fygLyUEDDPTJvL9+Bor0dIwn6ePOsRM2y0zQQ==}
+
+  bootstrap-sass@3.3.5:
+    resolution: {integrity: sha512-VcoTcgIaiHrXbJ0Su0IwDd4G29atJyMb3TKw1f+ni3BiufvVI4eMIFTB+rA61hF6sszj3hv+fVlSg+MnvNordA==}
 
   bops@0.0.3:
     resolution: {integrity: sha512-1khcWD+1vAEnl1GHqJ2KFeR4qG/WCj9yZZ3K/cwdnRUjy6hFOlUuyboy+cHHiFpx0ZqLcjMYouWv0USQsoQ6HA==}
@@ -9072,6 +9078,8 @@ snapshots:
       error: 7.0.2
       raw-body: 1.1.7
       safe-json-parse: 1.0.1
+
+  bootstrap-sass@3.3.5: {}
 
   bops@0.0.3:
     dependencies:

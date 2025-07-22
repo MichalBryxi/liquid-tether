@@ -9,14 +9,14 @@ module.exports = function (defaults) {
     snippetSearchPaths: ['app', 'tests/dummy/app', 'addon'],
     sassOptions: {
       includePaths: [
-        'bower_components/bootstrap-sass/assets/stylesheets',
-        'bower_components/flat-ui-sass/vendor/assets/stylesheets'
+        'node_modules/bootstrap-sass/assets/stylesheets',
+        'node_modules/flat-ui-sass/vendor/assets/stylesheets',
       ],
-      extension: 'scss'
-    }
+      extension: 'scss',
+    },
   });
 
-  app.import('vendor/sinon.js', { type: 'test'});
+  app.import('vendor/sinon.js', { type: 'test' });
 
   /*
     This build file specifies the options for the dummy test app of this
