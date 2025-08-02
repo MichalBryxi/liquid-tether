@@ -51,7 +51,6 @@ function wormholeTransitionName(name) {
 
 export function ranWormholeTransition(app, assert, name) {
   const context = getContext();
-  debugger;
   assert.ok(
     transitionMap(context).transitionFor.returned(wormholeTransitionName(name)),
     `expected transition ${name}`
