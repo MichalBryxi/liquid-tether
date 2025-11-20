@@ -63,4 +63,4 @@ jobs:
         env:
           CI: true
         run: |
-          npx ember try:one ${{ matrix.scenario }} --- yarn test
+          npx ember try:one ${{ matrix.scenario }} -- yarn test
