@@ -46,10 +46,13 @@ jobs:
       fail-fast: false
       matrix:
         scenario:
+          - default
+          - ember-1.13
+          - ember-lts-2.4
+          - ember-lts-2.8
+          - ember-lts-2.12
+          - ember-lts-2.16
           - ember-lts-2.18
-          - ember-release
-          - ember-beta
-          - ember-canary
 
     steps:
       - name: Checkout
@@ -71,5 +74,6 @@ jobs:
       - name: Run tests (ember-try:one)
         env:
           CI: true
+          EMBER_TRY_SCENARIO: ${{ matrix.scenario }}
         run: |
           npx ember try:one ${{ matrix.scenario }} -- yarn test
