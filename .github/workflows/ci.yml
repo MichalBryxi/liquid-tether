@@ -7,6 +7,10 @@ on:
       - main
       - master
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   lint:
@@ -15,16 +19,20 @@ jobs:
 
     steps:
       - name: Checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: "12.x"
+          node-version: "18.x"
           cache: "yarn"
+          cache-dependency-path: yarn.lock
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+
+      - name: Install Bower dependencies
+        run: npx bower install --allow-root --config.interactive=false
 
       - name: Lint JS
         run: yarn lint
@@ -38,28 +46,34 @@ jobs:
       fail-fast: false
       matrix:
         scenario:
-          - ember-lts-3.16
-          - ember-lts-3.20
-          - ember-lts-3.24
-          - ember-release
-          - ember-beta
-          - ember-canary
+          - default
+          - ember-1.13
+          - ember-lts-2.4
+          - ember-lts-2.8
+          - ember-lts-2.12
+          - ember-lts-2.16
+          - ember-lts-2.18
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: "12.x"
+          node-version: "18.x"
           cache: "yarn"
+          cache-dependency-path: yarn.lock
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Install Bower dependencies
+        run: npx bower install --allow-root --config.interactive=false
+
       - name: Run tests (ember-try:one)
         env:
           CI: true
+          EMBER_TRY_SCENARIO: ${{ matrix.scenario }}
         run: |
-          npx ember try:one ${{ matrix.scenario }} --- yarn test
+          npx ember try:one ${{ matrix.scenario }} -- yarn test
