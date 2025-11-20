@@ -77,3 +77,4 @@ jobs:
           EMBER_TRY_SCENARIO: ${{ matrix.scenario }}
         run: |
           npx ember try:one ${{ matrix.scenario }} -- yarn test
+          
