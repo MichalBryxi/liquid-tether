@@ -1,11 +1,11 @@
 {
   "name": "liquid-tether Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "image": "node:18-bullseye",
   "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/${localWorkspaceFolderBasename},type=bind,consistency=cached",
   "runArgs": ["--init"],
   "postCreateCommand": "yarn install --frozen-lockfile && npx bower install --allow-root --config.interactive=false",
-  "remoteUser": "vscode",
+  "remoteUser": "node",
   "customizations": {
     "vscode": {
       "extensions": ["dbaeumer.vscode-eslint", "eamodio.gitlens"]
