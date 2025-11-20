@@ -31,6 +31,10 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Install Bower dependencies
+        run: |
+          npx bower install --allow-root --config.interactive=false
+
       - name: Lint JS
         run: yarn lint
 
