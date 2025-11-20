@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "12.x"
+          node-version: "18.x"
           cache: "yarn"
           cache-dependency-path: yarn.lock
 
@@ -57,7 +57,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "12.x"
+          node-version: "18.x"
           cache: "yarn"
           cache-dependency-path: yarn.lock
 
