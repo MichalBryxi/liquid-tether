@@ -47,7 +47,8 @@
     "eslint-plugin-node": "^5.2.1",
     "liquid-fire": "0.28.0",
     "loader.js": "^4.2.3",
-    "sass": "^1.94.2"
+    "sass": "^1.94.2",
+    "bower": "^1.8.12"
   },
   "keywords": [
     "ember-addon"
